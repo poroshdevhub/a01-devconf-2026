@@ -1,0 +1,116 @@
+/* =========================
+    css reset
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+    Root Variable
+========================= */
+:root {
+    --primary-color: #1D4ED8;
+    --seoundary-color: #0D1B2A;
+    --light-color: #FFFFFF;
+    --text-dark2-color: #575757;
+
+
+    --font-Arimo: "Arimo", sans-serif;
+    --font-Inter: "Inter", sans-serif;
+}
+
+/* =========================
+    global css
+========================= */
+
+a {
+    text-decoration: none;
+
+}
+
+ul,
+li {
+    list-style: none;
+
+}
+
+
+
+/* =========================
+    utility class css
+========================= */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.common-btn{
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-family: var(--font-Inter);
+    font-size: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: ease-in 0.3s;
+
+}
+.common-btn:hover{
+    background-color: var(--seoundary-color);
+    color: var(--light-color);
+
+
+}
+/* =========================
+    header & Navigation css
+========================= */
+header {
+    background-color: #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    padding: 0.5rem 1rem;
+    color: var(--text-dark2-color);
+    transition: all ease-in 0.3s;
+    font-size: 1rem;
+    font-family: var(--font-Arimo);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+
+}
+
+
+
+/* =========================
+    css reset
+========================= */
