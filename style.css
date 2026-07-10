@@ -36,6 +36,9 @@ li {
 
 }
 
+img {
+    max-width: 100%;
+}
 
 
 /* =========================
@@ -45,7 +48,8 @@ li {
     max-width: 1280px;
     margin: 0 auto;
 }
-.common-btn{
+
+.common-btn {
     border: none;
     background-color: var(--primary-color);
     color: var(--light-color);
@@ -58,12 +62,14 @@ li {
     transition: ease-in 0.3s;
 
 }
-.common-btn:hover{
+
+.common-btn:hover {
     background-color: var(--seoundary-color);
     color: var(--light-color);
 
 
 }
+
 /* =========================
     header & Navigation css
 ========================= */
@@ -76,6 +82,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 0;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -91,6 +98,10 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+
+
 }
 
 nav ul li a {
@@ -110,6 +121,61 @@ nav ul li a:hover {
 }
 
 
+
+/* =========================
+    hero-area css
+========================= */
+#hero-area {
+    background: url('./assets/img/banner.jpg');
+    max-width: 100%;
+    min-height: 85vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.hero-content {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-item {
+    text-align: center;
+    max-width: 75%;
+    margin: 0 auto;
+
+}
+
+.hero-item h1 {
+    color: var(--light-color);
+    font-size: 80px;
+    font-family: var(--font-Inter);
+    font-weight: 700;
+
+}
+
+.hero-item h1 span {
+    font-style: italic;
+}
+
+.hero-item p {
+    /* max-width: 50%; */
+    margin: 0 auto;
+    color: var(--light-color);
+    font-size: 1.25rem;
+    font-family: var(--font-Inter);
+    padding: 1rem 5rem;
+
+}
+
+.hero-btn{
+    padding: 0.8rem 3rem;
+}
 
 /* =========================
     css reset
