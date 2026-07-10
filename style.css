@@ -64,6 +64,7 @@ h2 {
 .outline-btn {
     border: none;
     padding: 0.5rem 1rem;
+    background-color: var(--light-color);
     border-radius: 10px;
     font-family: var(--font-Inter);
     font-size: 1rem;
@@ -75,6 +76,7 @@ h2 {
     display: block;
 
 }
+
 
 .common-btn {
     border: none;
@@ -311,6 +313,15 @@ nav ul li a:hover {
     /* border: 1px solid var(--boder-color); */
     border-radius: 10px;
     box-shadow: 1px 1px 5px 1px var(--boder-color);
+    border: 1px dashed transparent;
+}
+
+.secure-item:nth-child(2):hover {
+    border: 1px dashed var(--light-color);
+}
+
+.secure-item:hover {
+    border: 1px dashed var(--primary-color);
 }
 
 .secure-item-plan {
@@ -357,10 +368,10 @@ ul.secure-item-desc li::marker {
 }
 
 
-.secure-item:nth-child(1) .outline-btn {
+/* .secure-item:nth-child(1) .outline-btn {
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
-}
+} */
 
 .secure-item:nth-child(2) {
     background-color: var(--secondary-color);
@@ -380,20 +391,27 @@ ul.secure-item-desc li::marker {
     opacity: 0.7;
 }
 
-.secure-item:nth-child(2) :is(.outline-btn) {
+.secure-item:nth-child(2) .outline-btn{
     background-color: var(--primary-color);
+}
+.secure-item:nth-child(2) .outline-btn:hover{
+    background-color: var(--extra-color);
+    color: var(--secondary-color);
 }
 
 /* 3rd - item */
-.secure-item:nth-child(3) :is(.outline-btn) {
+
+.secure-item:nth-child(1) .outline-btn,
+.secure-item:nth-child(3) .outline-btn{
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
 }
 
-/* =========================
-    css reset
-========================= */
-
+.secure-item:nth-child(1) .outline-btn:hover,
+.secure-item:nth-child(3) .outline-btn:hover {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
 
 
 
@@ -430,7 +448,8 @@ footer {
     font-size: 0.8rem;
     transition: 0.3;
 }
-.footer-right ul li a:hover{
+
+.footer-right ul li a:hover {
     color: var(--extra-color);
 }
 
@@ -448,21 +467,21 @@ footer {
    Conference Extra Section
 ========================== */
 
-.conference-extra{
+.conference-extra {
     background: var(--secondary-color);
     padding: 100px 0;
 }
 
-.extra-block{
+.extra-block {
     margin-bottom: 80px;
 }
 
-.section-heading{
+.section-heading {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.section-tag{
+.section-tag {
     display: inline-block;
     color: var(--primary-color);
     font-family: var(--font-Inter);
@@ -471,7 +490,7 @@ footer {
 }
 
 .section-heading h2,
-.newsletter h2{
+.newsletter h2 {
     font-family: var(--font-Arimo);
     color: var(--light-color);
     font-size: 2rem;
@@ -479,7 +498,7 @@ footer {
 }
 
 .section-heading p,
-.newsletter p{
+.newsletter p {
     color: var(--light-color);
     opacity: .8;
     font-family: var(--font-Inter);
@@ -490,13 +509,13 @@ footer {
 
 /* Sponsors */
 
-.sponsor-grid{
+.sponsor-grid {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
 }
 
-.sponsor-card{
+.sponsor-card {
     border: 1px solid var(--boder-color);
     padding: 28px;
     text-align: center;
@@ -506,28 +525,28 @@ footer {
     transition: .3s;
 }
 
-.sponsor-card:hover{
+.sponsor-card:hover {
     border-color: var(--primary-color);
     transform: translateY(-4px);
 }
 
 /* Venue */
 
-.venue-highlight{
+.venue-highlight {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 80px;
 }
 
 .venue-card,
-.highlight-card{
+.highlight-card {
     border: 1px solid var(--boder-color);
     padding: 35px;
     border-radius: 12px;
 }
 
-.venue-card p{
+.venue-card p {
     color: var(--light-color);
     opacity: .8;
     line-height: 1.8;
@@ -535,51 +554,51 @@ footer {
     font-family: var(--font-Inter);
 }
 
-.info-list{
+.info-list {
     list-style: none;
 }
 
-.info-list li{
+.info-list li {
     color: var(--light-color);
     padding: 10px 0;
     border-bottom: 1px solid var(--boder-color);
     font-family: var(--font-Inter);
 }
 
-.highlight-grid{
+.highlight-grid {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-.highlight-item{
+.highlight-item {
     border: 1px solid var(--boder-color);
     padding: 25px;
     border-radius: 10px;
     text-align: center;
 }
 
-.highlight-item h3{
+.highlight-item h3 {
     color: var(--primary-color);
     font-size: 2rem;
     font-family: var(--font-Arimo);
     margin-bottom: 10px;
 }
 
-.highlight-item p{
+.highlight-item p {
     color: var(--light-color);
     font-family: var(--font-Inter);
 }
 
 /* Jobs */
 
-.job-list{
+.job-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.job-card{
+.job-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -589,13 +608,13 @@ footer {
     padding: 25px;
 }
 
-.job-card h3{
+.job-card h3 {
     color: var(--light-color);
     font-family: var(--font-Arimo);
     margin-bottom: 8px;
 }
 
-.job-card p{
+.job-card p {
     color: var(--light-color);
     opacity: .8;
     font-family: var(--font-Inter);
@@ -603,25 +622,25 @@ footer {
 
 /* FAQ */
 
-.faq-grid{
+.faq-grid {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
-.faq-card{
+.faq-card {
     border: 1px solid var(--boder-color);
     border-radius: 10px;
     padding: 25px;
 }
 
-.faq-card h3{
+.faq-card h3 {
     color: var(--light-color);
     margin-bottom: 15px;
     font-family: var(--font-Arimo);
 }
 
-.faq-card p{
+.faq-card p {
     color: var(--light-color);
     opacity: .8;
     line-height: 1.7;
@@ -630,7 +649,7 @@ footer {
 
 /* Newsletter */
 
-.newsletter{
+.newsletter {
     border: 1px solid var(--boder-color);
     border-radius: 14px;
     padding: 50px;
@@ -640,14 +659,14 @@ footer {
     gap: 40px;
 }
 
-.newsletter-form{
+.newsletter-form {
     display: flex;
     width: 100%;
     max-width: 520px;
     gap: 15px;
 }
 
-.newsletter-form input{
+.newsletter-form input {
     flex: 1;
     border: 1px solid var(--boder-color);
     background: transparent;
@@ -658,69 +677,69 @@ footer {
     font-family: var(--font-Inter);
 }
 
-.newsletter-form input::placeholder{
+.newsletter-form input::placeholder {
     color: var(--light-color);
     opacity: .6;
 }
 
 /* Responsive */
 
-@media (max-width:992px){
+@media (max-width:992px) {
 
-    .sponsor-grid{
-        grid-template-columns: repeat(3,1fr);
+    .sponsor-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .venue-highlight{
+    .venue-highlight {
         grid-template-columns: 1fr;
     }
 
-    .newsletter{
+    .newsletter {
         flex-direction: column;
         text-align: center;
     }
 
-    .newsletter-form{
+    .newsletter-form {
         max-width: 100%;
     }
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    .faq-grid{
+    .faq-grid {
         grid-template-columns: 1fr;
     }
 
-    .sponsor-grid{
-        grid-template-columns: repeat(2,1fr);
+    .sponsor-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .job-card{
+    .job-card {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .newsletter-form{
+    .newsletter-form {
         flex-direction: column;
     }
 
-    .highlight-grid{
+    .highlight-grid {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width:480px){
+@media (max-width:480px) {
 
-    .conference-extra{
+    .conference-extra {
         padding: 70px 0;
     }
 
-    .sponsor-grid{
+    .sponsor-grid {
         grid-template-columns: 1fr;
     }
 
     .section-heading h2,
-    .newsletter h2{
+    .newsletter h2 {
         font-size: 1.6rem;
     }
 }
