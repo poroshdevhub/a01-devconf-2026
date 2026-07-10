@@ -12,7 +12,7 @@
 ========================= */
 :root {
     --primary-color: #1D4ED8;
-    --seoundary-color: #0D1B2A;
+    --secondary-color: #0D1B2A;
     --light-color: #FFFFFF;
     --text-dark2-color: #575757;
     --boder-color: #ddd;
@@ -44,6 +44,11 @@ img {
     max-width: 100%;
 }
 
+h2 {
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    font-size: 3.5rem;
+}
 
 /* =========================
     utility class css
@@ -51,6 +56,23 @@ img {
 .container {
     max-width: 1280px;
     margin: 0 auto;
+}
+
+
+
+.outline-btn {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-family: var(--font-Inter);
+    font-size: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: ease-in 0.3s;
+
+    width: 100%;
+    display: block;
+
 }
 
 .common-btn {
@@ -68,7 +90,7 @@ img {
 }
 
 .common-btn:hover {
-    background-color: var(--seoundary-color);
+    background-color: var(--secondary-color);
     color: var(--light-color);
 
 
@@ -158,7 +180,7 @@ nav ul li a:hover {
 
 .hero-item h1 {
     color: var(--light-color);
-    font-size: 80px;
+    font-size: 5rem;
     font-family: var(--font-Inter);
     font-weight: 700;
 
@@ -193,7 +215,7 @@ nav ul li a:hover {
 
 .speakers-team-title h2 {
     text-align: center;
-    color: var(--seoundary-color);
+    color: var(--secondary-color);
     padding: 1rem 0;
 }
 
@@ -229,7 +251,7 @@ nav ul li a:hover {
 
 .speaker-team-item-description h3 {
     padding: 0.3rem 0;
-    color: var(--seoundary-color);
+    color: var(--secondary-color);
     font-size: 1.25rem;
     text-transform: capitalize;
 
@@ -245,6 +267,92 @@ nav ul li a:hover {
 }
 
 
+
+
+/* =========================
+    secure-section
+========================= */
+#secure-section {
+    padding: 1rem 0;
+    margin: 0.5rem 0;
+}
+
+.secure-content {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.secure-content-title {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secure-content-title p {
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 1rem;
+    color: var(--text-dark2-color);
+}
+
+
+/* secure-item */
+.secure-item-parent{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 1rem;
+}
+.secure-item {
+    padding: 1rem 1rem;
+    /* border: 1px solid var(--boder-color); */
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px var(--boder-color);
+}
+
+.secure-item-plan {
+    border-bottom: 1px solid var(--boder-color);
+    padding: 1rem 0;
+}
+
+.secure-item-plan h6 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0.3rem;
+    color: var(--text-dark2-color);
+}
+
+.secure-item-plan h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+
+
+}
+
+.secure-item-plan p {
+    font-size: 0.8rem;
+    color: var(--text-dark2-color);
+}
+
+ul.secure-item-desc {
+    padding: 1rem 1rem;
+}
+
+ul.secure-item-desc li {
+    color: var(--text-dark2-color);
+    list-style: disc;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+
+
+}
+
+ul.secure-item-desc li::marker {
+    color: var(--primary-color);
+}
 
 
 /* =========================
