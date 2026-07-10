@@ -16,6 +16,7 @@
     --light-color: #FFFFFF;
     --text-dark2-color: #575757;
     --boder-color: #ddd;
+    --extra-color: #93C5FD;
 
 
     --font-Arimo: "Arimo", sans-serif;
@@ -69,7 +70,7 @@ h2 {
     text-transform: capitalize;
     cursor: pointer;
     transition: ease-in 0.3s;
-
+    font-weight: 600;
     width: 100%;
     display: block;
 
@@ -278,7 +279,7 @@ nav ul li a:hover {
 }
 
 .secure-content {
-    max-width: 85%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -299,13 +300,14 @@ nav ul li a:hover {
 
 
 /* secure-item */
-.secure-item-parent{
+.secure-item-parent {
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
+
 .secure-item {
-    padding: 1rem 1rem;
+    padding: 1.5rem 1rem;
     /* border: 1px solid var(--boder-color); */
     border-radius: 10px;
     box-shadow: 1px 1px 5px 1px var(--boder-color);
@@ -354,6 +356,37 @@ ul.secure-item-desc li::marker {
     color: var(--primary-color);
 }
 
+
+.secure-item:nth-child(1) .outline-btn {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.secure-item:nth-child(2) {
+    background-color: var(--secondary-color);
+}
+
+/* :is multiple css select */
+
+.secure-item:nth-child(2) :is(h6) {
+    color: var(--extra-color);
+}
+
+.secure-item:nth-child(2) :is(.outline-btn, h2, p, li) {
+    color: var(--light-color);
+}
+.secure-item:nth-child(2) :is(p, li) {
+   opacity: 0.7;
+}
+.secure-item:nth-child(2) :is(.outline-btn) {
+    background-color: var(--primary-color);
+}
+
+/* 3rd - item */
+.secure-item:nth-child(3) :is(.outline-btn) {
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
 
 /* =========================
     css reset
