@@ -437,3 +437,290 @@ footer {
 /* =========================
     Footer End
 ========================= */
+
+
+
+
+
+/* ai Promt ganarate */
+
+/* ==========================
+   Conference Extra Section
+========================== */
+
+.conference-extra{
+    background: var(--secondary-color);
+    padding: 100px 0;
+}
+
+.extra-block{
+    margin-bottom: 80px;
+}
+
+.section-heading{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-tag{
+    display: inline-block;
+    color: var(--primary-color);
+    font-family: var(--font-Inter);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.newsletter h2{
+    font-family: var(--font-Arimo);
+    color: var(--light-color);
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.section-heading p,
+.newsletter p{
+    color: var(--light-color);
+    opacity: .8;
+    font-family: var(--font-Inter);
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+/* Sponsors */
+
+.sponsor-grid{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+}
+
+.sponsor-card{
+    border: 1px solid var(--boder-color);
+    padding: 28px;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--light-color);
+    font-family: var(--font-Arimo);
+    transition: .3s;
+}
+
+.sponsor-card:hover{
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+}
+
+/* Venue */
+
+.venue-highlight{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.venue-card,
+.highlight-card{
+    border: 1px solid var(--boder-color);
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.venue-card p{
+    color: var(--light-color);
+    opacity: .8;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-family: var(--font-Inter);
+}
+
+.info-list{
+    list-style: none;
+}
+
+.info-list li{
+    color: var(--light-color);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--boder-color);
+    font-family: var(--font-Inter);
+}
+
+.highlight-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.highlight-item{
+    border: 1px solid var(--boder-color);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.highlight-item h3{
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-family: var(--font-Arimo);
+    margin-bottom: 10px;
+}
+
+.highlight-item p{
+    color: var(--light-color);
+    font-family: var(--font-Inter);
+}
+
+/* Jobs */
+
+.job-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.job-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--boder-color);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.job-card h3{
+    color: var(--light-color);
+    font-family: var(--font-Arimo);
+    margin-bottom: 8px;
+}
+
+.job-card p{
+    color: var(--light-color);
+    opacity: .8;
+    font-family: var(--font-Inter);
+}
+
+/* FAQ */
+
+.faq-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.faq-card{
+    border: 1px solid var(--boder-color);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.faq-card h3{
+    color: var(--light-color);
+    margin-bottom: 15px;
+    font-family: var(--font-Arimo);
+}
+
+.faq-card p{
+    color: var(--light-color);
+    opacity: .8;
+    line-height: 1.7;
+    font-family: var(--font-Inter);
+}
+
+/* Newsletter */
+
+.newsletter{
+    border: 1px solid var(--boder-color);
+    border-radius: 14px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.newsletter-form{
+    display: flex;
+    width: 100%;
+    max-width: 520px;
+    gap: 15px;
+}
+
+.newsletter-form input{
+    flex: 1;
+    border: 1px solid var(--boder-color);
+    background: transparent;
+    color: var(--light-color);
+    padding: 15px 18px;
+    border-radius: 8px;
+    outline: none;
+    font-family: var(--font-Inter);
+}
+
+.newsletter-form input::placeholder{
+    color: var(--light-color);
+    opacity: .6;
+}
+
+/* Responsive */
+
+@media (max-width:992px){
+
+    .sponsor-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .venue-highlight{
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter-form{
+        max-width: 100%;
+    }
+}
+
+@media (max-width:768px){
+
+    .faq-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .sponsor-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .job-card{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter-form{
+        flex-direction: column;
+    }
+
+    .highlight-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:480px){
+
+    .conference-extra{
+        padding: 70px 0;
+    }
+
+    .sponsor-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .newsletter h2{
+        font-size: 1.6rem;
+    }
+}
