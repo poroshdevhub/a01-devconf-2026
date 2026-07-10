@@ -375,9 +375,11 @@ ul.secure-item-desc li::marker {
 .secure-item:nth-child(2) :is(.outline-btn, h2, p, li) {
     color: var(--light-color);
 }
+
 .secure-item:nth-child(2) :is(p, li) {
-   opacity: 0.7;
+    opacity: 0.7;
 }
+
 .secure-item:nth-child(2) :is(.outline-btn) {
     background-color: var(--primary-color);
 }
@@ -390,4 +392,48 @@ ul.secure-item-desc li::marker {
 
 /* =========================
     css reset
+========================= */
+
+
+
+
+/* =========================
+    Footer Start
+========================= */
+footer {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-left p {
+    color: var(--light-color);
+    opacity: 0.7;
+    font-size: 0.8rem;
+}
+
+.footer-right ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-right ul li a {
+    color: var(--light-color);
+    opacity: 0.7;
+    font-size: 0.8rem;
+    transition: 0.3;
+}
+.footer-right ul li a:hover{
+    color: var(--extra-color);
+}
+
+/* =========================
+    Footer End
 ========================= */
