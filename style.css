@@ -15,6 +15,7 @@
     --seoundary-color: #0D1B2A;
     --light-color: #FFFFFF;
     --text-dark2-color: #575757;
+    --boder-color: #ddd;
 
 
     --font-Arimo: "Arimo", sans-serif;
@@ -24,6 +25,9 @@
 /* =========================
     global css
 ========================= */
+body {
+    font-family: var(--font-Inter);
+}
 
 a {
     text-decoration: none;
@@ -132,6 +136,7 @@ nav ul li a:hover {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 1rem;
 
 
 }
@@ -173,9 +178,74 @@ nav ul li a:hover {
 
 }
 
-.hero-btn{
+.hero-btn {
     padding: 0.8rem 3rem;
 }
+
+
+/* =========================
+    speakers-team-section
+========================= */
+#speakers-team-section {
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.speakers-team-title h2 {
+    text-align: center;
+    color: var(--seoundary-color);
+    padding: 1rem 0;
+}
+
+.speakers-team-content {
+    padding: 1rem 0;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.speaker-team-item {
+    border: 1px solid var(--boder-color);
+    border-radius: 10px;
+
+}
+
+.speaker-team-item img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.speaker-team-item-description {
+    padding: 1rem 1rem;
+}
+
+.speaker-team-item-description h5 {
+    padding: 0.5rem 0;
+    font-size: 0.6rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+
+}
+
+.speaker-team-item-description h3 {
+    padding: 0.3rem 0;
+    color: var(--seoundary-color);
+    font-size: 1.25rem;
+    text-transform: capitalize;
+
+}
+
+.speaker-team-item-description p {
+    padding: 0.2rem 0;
+    color: var(--text-dark2-color);
+    font-size: 0.8rem;
+    text-transform: capitalize;
+
+
+}
+
+
+
 
 /* =========================
     css reset
